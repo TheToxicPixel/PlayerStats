@@ -23,6 +23,7 @@ public class JoinListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent joinEvent) {
         if (!joinEvent.getPlayer().hasPlayedBefore()) {
             threadManager.startReloadThread(null);
+            joinEvent.getPlayer().sendMessage("Nutze ./statexclude um von der Statistic zu streichen.");
         }
     }
 }
